@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Selinas Webpage</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+
+
+	<nav class="navbar navbar-inverse">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#myNavbar">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+
+			<a class="navbar-brand" href="index.html">Home</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+
+
+				<li><a href="about_me.html">Über Mich</a></li>
+				<li><a href="codecademy.html">Codecademy</a></li>
+				<li><a href="spiele.html">Games</a></li>
+				<li><a href="howToWebsite.html">Erstellen einer Website</a></li>
+				<li class="active"><a href="arsnova.html">ARSnova</a></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="Impressum.html">Impressum</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+
+
+
+
+
+
+	<div class="container-fluid text-center">
+		<div class="row content">
+			<div class="col-sm-2 sidenav" class="sidenav-left"></div>
+			<div class="col-sm-8" class="content">
+				<h1>ARSnova Statistik</h1>
+
+
+				<br>
+
+
+				<div class="onLine">
+					Answers
+					<div class="text circle green" id="answers"></div>
+				</div>
+
+
+				<div class="onLine">
+					Lecture questions
+					<div class="text circle2 orange" id="lectureQuestions"></div>
+				</div>
+
+				<div class="onLine">
+					Preparation questions
+					<div class="text circle grey" id="preparationQuestions"></div>
+				</div>
+
+				<div class="onLine">
+					Open sessions
+					<div class="text circle2 green" id="openSessions"></div>
+				</div>
+
+				<div class="onLine">
+					Closed sessions
+					<div class="text circle orange" id="closedSessions"></div>
+				</div>
+
+				<div class="onLine">
+					Creators
+					<div class="text circle2 grey" id="creators"></div>
+				</div>
+				<div class="onLine">
+					Active Users
+					<div class="text circle green" id="activeUsers"></div>
+				</div>
+
+				<div class="onLine">
+					Active Students
+					<div class="text circle2 orange" id="activeStudents"></div>
+				</div>
+
+				<div class="onLine">
+					Logged in Users
+					<div class="text circle grey" id="loggedinUsers"></div>
+				</div>
+
+				<div class="onLine">
+					Interposed Questions
+					<div class="text circle2 green" id="interposedQuestions"></div>
+				</div>
+
+				<div class="onLine">
+					Concept Questions
+					<div class="text circle orange" id="conceptQuestions"></div>
+				</div>
+
+
+				<div class="onLine">
+					Questions
+					<div class="text circle2 grey" id="questions"></div>
+				</div>
+
+
+				<div class="onLine">
+					Sessions
+					<div class="text circle green" id="sessions"></div>
+				</div>
+
+
+
+				<script type="text/javascript">
+					// $(".circle").css("background-color", "yellow"); 
+
+					request();
+					window.setInterval(function() {
+
+						request(); //calling every 30 seconds
+					}, 30000);
+
+					var response;
+					var xhr;
+					function request() {
+
+						//var div = document.getElementById( 'answers' );
+						//div.insertAdjacentHTML( 'beforeBegin', 'my text must be added here' );
+						xhr = new XMLHttpRequest();
+
+						xhr.open('GET', 'http://arsnova.eu/api/statistics',
+								true);
+						xhr.send(null);
+						xhr.onreadystatechange = function() {
+							if (xhr.readyState == XMLHttpRequest.DONE) {
+
+								response = JSON.parse(xhr.responseText);
+							}
+
+							document.getElementById("answers").innerHTML = response.answers;
+							document.getElementById("lectureQuestions").innerHTML = response.lectureQuestions;
+							document.getElementById("preparationQuestions").innerHTML = response.preparationQuestions;
+							document.getElementById("openSessions").innerHTML = response.openSessions;
+							document.getElementById("closedSessions").innerHTML = response.closedSessions;
+							document.getElementById("creators").innerHTML = response.creators;
+							document.getElementById("activeUsers").innerHTML = response.activeUsers;
+							document.getElementById("activeStudents").innerHTML = response.activeStudents;
+							document.getElementById("loggedinUsers").innerHTML = response.loggedinUsers;
+							document.getElementById("interposedQuestions").innerHTML = response.interposedQuestions;
+							document.getElementById("conceptQuestions").innerHTML = response.conceptQuestions;
+							document.getElementById("questions").innerHTML = response.questions;
+							document.getElementById("sessions").innerHTML = response.sessions;
+
+						}
+					}
+				</script>
+
+
+
+
+			</div>
+			<div class="col-sm-2 sidenav" class="sidenav-right"></div>
+		</div>
+	</div>
+
+	<footer class="container-fluid  text-center">
+
+
+		<table align="center">
+
+
+			<tr>
+
+				<td>
+					<div class="mw-inputbox-centered" style="">
+						<form name="searchbox" class="searchbox"
+							action="https://de.wikipedia.org/wiki/Spezial:Suche"
+							id="searchbox">
+							<label for="Volltextsuche">Suchbegriff für Wikipedia
+								eingeben:</label>
+							<p>
+								<input
+									class="mw-inputbox-input searchboxInput mw-ui-input mw-ui-input-inline"
+									name="search" type="text" id="Volltextsuche"
+									value="Volltextsuche" placeholder="Jetzt suchen!" size="50"
+									dir="ltr" /><br /> <input type="submit" name="go"
+									class="mw-ui-button" id="Artikelsuche" value="Artikel-Suche" />&#160;<input
+									type="submit" name="fulltext" class="mw-ui-button"
+									value="Volltextsuche" />
+							</p>
+						</form>
+
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<a class="w3"
+			href="http://wave.webaim.org/report#/http://selinas.cloudcontrolled.com/about_me.html"><img
+			src="http://www.w3.org/WAI/wcag2AAA.png" alt="WAI-AAA Plakette"></a>
+
+
+
+
+		<p align="left">
+			<font color="#d6d6c2">zuletzt aktualisiert: 22. Januar 2016</font>
+		</p>
+
+	</footer>
+</body>
+</html>

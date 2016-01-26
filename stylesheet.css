@@ -1,0 +1,143 @@
+@CHARSET "UTF-8";
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.content {
+	font-family: "Times New Roman";
+	text-align: justify;
+	line-height: 25px;
+}
+
+.navbar-nav {
+	padding-left: 32px;
+}
+
+.navbar {
+	/*background-color:black;*/
+	padding-left: 100px;
+	margin-bottom: 0;
+	border-radius: 0;
+	font-family: "Times New Roman";
+	font-size: 18px;
+}
+
+.navbar-brand {
+	font-size: 20px;
+	font-weight: bold;
+}
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+	height: 450px
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+	padding-top: 100%;
+	background-color: white;
+	height: 20%;
+	background-image:
+		url(https://pixabay.com/static/uploads/photo/2014/11/29/17/46/background-550492_960_720.jpg);
+}
+
+.quake {
+	vertical-align: text-middle;
+}
+
+.spiele img {
+	height: 100px;
+	width: 100px;
+}
+/* Set black background color, white text and some padding */
+footer {
+	background-color: black;
+	color: black;
+	padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+	.sidenav {
+		height: auto;
+		padding: 15px;
+	}
+	.row.content {
+		height: auto;
+	}
+	header {
+		height: 270px;
+	}
+}
+
+/*
+	
+	
+	ARSnova Statistics - Format
+	
+	
+	*/
+
+
+.onLine {
+	
+	
+	line-height: 80px;
+	float:center;
+	margin-left:300px;
+}
+
+.circle2{
+	width: 80px;
+	height: 80px;
+	background-color: red;
+	border-radius:20px 5px 20px 5px;/* top left, top right, bottom right, bottom left */
+	margin-right:300px;
+	float:right;
+}
+.circle {
+	width: 80px;
+	height: 80px;
+	background-color: red;
+	border-radius: 5px 20px 5px 20px;/* top left, top right, bottom right, bottom left */
+	margin-right:300px;
+	float:right;
+	 
+}
+
+#answers, #lectureQuestions, #preparationQuestions, #openSessions,
+	#closedSessions, #creators, #activeUsers, #activeStudents,
+	#loggedinUsers, #interposedQuestions, #conceptQuestions, #questions,
+	#sessions {
+	text-align: center;
+	line-height: 80px;
+}
+
+.green {
+	background-color: #3d9c19;
+	
+	
+}
+
+.grey {
+	background-color: #394a59;
+	color: white;
+}
+
+.orange {
+	background-color: #ff9600;
+	text-align: center;
+	line-height: 80px;
+}
+
+.text {
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: normal;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.answers .preparationQuestions .lectureQuestions .openSessions .closedSessions .creators .activeUser .activeStudents .loggedinUsers .interposedQuestions .conceptQuestions .questions .sessions
+	{
+	width: 50px;
+}
+}
