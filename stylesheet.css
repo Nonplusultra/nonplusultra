@@ -36,12 +36,7 @@
 	position: relative;
 	padding-top: 100%;
 	background-color: black;
-	background-image:
-		url(https://pixabay.com/static/uploads/photo/2014/11/29/17/46/background-550492_960_720.jpg);
-}
-
-.img_me {
-	positions: relative;
+	background-image: url(Bilder/sidenav.jpg);
 }
 
 .quake {
@@ -80,60 +75,69 @@ footer {
 		width: 50%;
 	}
 }
-	/*
+/*
 	
 	
 	ARSnova Statistics - Format
 	
 	
 	*/
-	.arsnova {
-		width: 50%;
-	}
-	.arsnova td {
-		font-size: 20px;
-		font-weight: bolt;
-	}
-	.circle2 {
-		width: 80px;
-		height: 80px;
-		border-radius: 20px 5px 20px 5px;
-		/* top left, top right, bottom right, bottom left */
-	}
-	.circle {
-		width: 80px;
-		height: 80px;
-		border-radius: 5px 20px 5px 20px;
-		/* top left, top right, bottom right, bottom left */
-	}
-	#answers, #lectureQuestions, #preparationQuestions, #openSessions,
-		#closedSessions, #creators, #activeUsers, #activeStudents,
-		#loggedinUsers, #interposedQuestions, #conceptQuestions, #questions,
-		#sessions {
-		text-align: center;
-		line-height: 80px;
-	}
-	.green {
-		background-color: #3d9c19;
-	}
-	.grey {
-		background-color: #394a59;
-		color: white;
-	}
-	.orange {
-		background-color: #ff9600;
-		text-align: center;
-		line-height: 80px;
-	}
-	.text {
-		font-family: Arial;
-		font-size: 15px;
-		font-weight: bold;
-		line-height: normal;
-		display: inline-block;
-		vertical-align: middle;
-	}
-	.search {
-		width: 70%;
-	}
+.arsnova {
+	width: 50%;
+}
+
+.arsnova td {
+	font-size: 20px;
+	font-weight: bolt;
+}
+
+.circle2 {
+	width: 80px;
+	height: 80px;
+	border-radius: 20px 5px 20px 5px;
+	/* top left, top right, bottom right, bottom left */
+}
+
+.circle {
+	width: 80px;
+	height: 80px;
+	border-radius: 5px 20px 5px 20px;
+	/* top left, top right, bottom right, bottom left */
+}
+
+#answers, #lectureQuestions, #preparationQuestions, #openSessions,
+	#closedSessions, #creators, #activeUsers, #activeStudents,
+	#loggedinUsers, #interposedQuestions, #conceptQuestions, #questions,
+	#sessions {
+	text-align: center;
+	line-height: 80px;
+}
+
+.green {
+	background-color: #3d9c19;
+}
+
+.grey {
+	background-color: #394a59;
+	color: white;
+}
+
+.orange {
+	background-color: #ff9600;
+	text-align: center;
+	line-height: 80px;
+}
+
+.text {
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: normal;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.search {
+	width: 70%;
+}
 }
